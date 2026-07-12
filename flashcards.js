@@ -1,27 +1,38 @@
 let currentIndex = 0;
 
 function loadCard() {
-    englishSentence.textContent = sentences[currentIndex].english;
-    germanSentence.textContent = sentences[currentIndex].german;
+    document.getElementById("englishSentence").textContent =
+        sentences[currentIndex].english;
 
-    answer.style.display = "none";
+    document.getElementById("germanSentence").textContent =
+        sentences[currentIndex].german;
+
+    document.getElementById("answer").style.display = "none";
 
     document.querySelector(".progress").textContent =
         `${currentIndex + 1} / ${sentences.length}`;
 }
 
-showAnswerBtn.onclick = function () {
-    answer.style.display = "block";
-};
 
-nextBtn.onclick = function () {
-    currentIndex++;
-    loadCard();
-};
+document.getElementById("showAnswerBtn").addEventListener("click", function () {
+    document.getElementById("answer").style.display = "block";
+});
 
-prevBtn.onclick = function () {
-    currentIndex--;
-    loadCard();
-};
+
+document.getElementById("nextBtn").addEventListener("click", function () {
+    if (currentIndex < sentences.length - 1) {
+        currentIndex++;
+        loadCard();
+    }
+});
+
+
+document.getElementById("prevBtn").addEventListener("click", function () {
+    if (currentIndex > 0) {
+        currentIndex--;
+        loadCard();
+    }
+});
+
 
 loadCard();
