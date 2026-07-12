@@ -9,7 +9,7 @@ const sentences = [
   },
   {
     english: "We are cooking dinner together.",
-    german: "Wir kochen zusammen Abendessen."
+    german: "Wir kochen zusammen das Abendessen."
   },
   {
     english: "Can you help me with my homework?",
@@ -99,7 +99,6 @@ const sentences = [
     english: "What time does the lesson start?",
     german: "Um wie viel Uhr beginnt der Unterricht?"
   },
-,
 {
     english: "I usually have breakfast at seven o'clock.",
     german: "Ich frühstücke normalerweise um sieben Uhr."
@@ -200,7 +199,7 @@ const sentences = [
     english: "What would you like to drink?",
     german: "Was möchtest du trinken?"
 },
-,
+
 {
     english: "I need to send an email today.",
     german: "Ich muss heute eine E-Mail schicken."
@@ -340,7 +339,7 @@ const sentences = [
 },
 {
     english: "She is making breakfast.",
-    german: "Sie macht Frühstück."
+    german: "Sie bereitet das Frühstück zu."
 },
 {
     english: "I would like to improve my German.",
@@ -402,7 +401,6 @@ const sentences = [
     english: "We are happy to see you again.",
     german: "Wir freuen uns, dich wiederzusehen."
 },
-,
 {
     english: "I make my bed every morning.",
     german: "Ich mache jeden Morgen mein Bett."
