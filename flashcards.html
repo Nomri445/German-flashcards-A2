@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice German A2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="flashcard">
+
+        <div class="progress">
+            1 / 500
+        </div>
+
+        <h2>🇬🇧 English</h2>
+
+        <p id="englishSentence">
+            I have to go to work tomorrow.
+        </p>
+
+        <button id="showAnswerBtn">
+            Show Answer
+        </button>
+
+        <div id="answer" style="display:none;">
+
+            <h2>🇩🇪 German</h2>
+
+            <p id="germanSentence">
+                Ich muss morgen zur Arbeit gehen.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="navigation">
+
+        <button id="prevBtn">← Previous</button>
+
+        <button id="nextBtn">Next →</button>
+
+    </div>
+
+</div>
+
+<script src="sentences.js"></script>
+<script src="flashcards.js"></script>
+
+</body>
+</html>
