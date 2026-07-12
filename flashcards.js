@@ -1,8 +1,10 @@
 let currentIndex = 0;
 
 function loadCard() {
-    document.getElementById("englishSentence").textContent = sentences[currentIndex].english;
-    document.getElementById("germanSentence").textContent = sentences[currentIndex].german;
+    const card = sentences[currentIndex];
+
+    document.getElementById("englishSentence").textContent = card.english;
+    document.getElementById("germanSentence").textContent = card.german;
 
     document.getElementById("answer").style.display = "none";
 
@@ -10,22 +12,28 @@ function loadCard() {
         `${currentIndex + 1} / ${sentences.length}`;
 }
 
-document.getElementById("showAnswerBtn").addEventListener("click", () => {
+document.getElementById("showAnswerBtn").onclick = function () {
     document.getElementById("answer").style.display = "block";
-});
+};
 
-document.getElementById("nextBtn").addEventListener("click", () => {
-    if (currentIndex < sentences.length - 1) {
-        currentIndex++;
-        loadCard();
+document.getElementById("nextBtn").onclick = function () {
+    currentIndex++;
+    
+    if (currentIndex >= sentences.length) {
+        currentIndex = 0;
     }
-});
 
-document.getElementById("prevBtn").addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        loadCard();
+    loadCard();
+};
+
+document.getElementById("prevBtn").onclick = function () {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = sentences.length - 1;
     }
-});
+
+    loadCard();
+};
 
 loadCard();
