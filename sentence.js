@@ -300,7 +300,6 @@ const sentences = [
     english: "What are you doing this weekend?",
     german: "Was machst du dieses Wochenende?"
 },
-,
 {
     english: "I have to finish this project today.",
     german: "Ich muss dieses Projekt heute fertig machen."
