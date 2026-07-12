@@ -1,65 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    min-height: 100vh;
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(180deg, #FFF8F3, #FFEFEA);
+    background: #f8f1ea;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    color: #5c4b51;
 }
 
 .container {
     width: 90%;
-    max-width: 420px;
+    max-width: 500px;
 }
 
-.welcome-card {
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 40px 30px;
+.welcome-card,
+.flashcard {
+    background: #fffaf5;
+    padding: 30px;
+    border-radius: 25px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 h1 {
     font-family: 'Patrick Hand', cursive;
-    font-size: 2.5rem;
-    color: #8d6e63;
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
+h2 {
+    font-size: 22px;
+}
+
 p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 button {
-    background: #f8c8c8;
-    color: #5c4b51;
     border: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
+    background: #c98b8b;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #f5b5b5;
-    transform: translateY(-2px);
+    margin-top: 15px;
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.96);
 }
+
+
+/* Flashcard page */
+
+.progress {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+#answer {
+    margin-top: 20px;
+}
+
+
+/* Previous and Next buttons */
+
 .navigation {
     display: flex;
     gap: 20px;
@@ -68,4 +81,24 @@ button:active {
 
 .navigation button {
     flex: 1;
+}
+
+
+/* Mobile adjustment */
+
+@media (max-width: 500px) {
+
+    .welcome-card,
+    .flashcard {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
 }
